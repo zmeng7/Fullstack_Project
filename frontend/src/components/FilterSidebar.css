@@ -1,0 +1,55 @@
+.filter-sidebar {
+  width: 300px;          /* ⭐让它变宽 */
+  min-height: 500px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  font-size: 16px;
+}
+
+
+.filter-section {
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.filter-checkbox {
+  display: block;
+  margin: 8px 0;
+  font-size: 38px;
+  cursor: pointer;
+  color: #555;
+}
+
+.filter-checkbox input {
+  margin-right: 8px;
+}
+
+.checkbox-text {
+    font-size: 28px;
+}
+
+
+/* 你截图里的圆角粉色按钮 */
+.filter-btn {
+  margin-top: 10px;
+  background: #fbb8d0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+}
+
+.filter-btn:hover {
+  opacity: 0.8;
+}

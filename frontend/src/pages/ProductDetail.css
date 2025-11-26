@@ -1,0 +1,26 @@
+.detail-container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.detail-img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.detail-info {
+  max-width: 500px;
+}
+
+.detail-price {
+  font-size: 22px;
+  color: #e47911;
+  font-weight: bold;
+}
+
+.detail-desc {
+  margin-top: 20px;
+  font-size: 16px;
+}

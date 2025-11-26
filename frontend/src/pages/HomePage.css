@@ -1,0 +1,90 @@
+/* ------------------ 整体布局：左右结构 ------------------ */
+
+.home-layout {
+  display: flex;
+  gap: 40px;
+  padding: 20px 40px;
+  align-items: flex-start;
+}
+
+/* ------------------ 左侧 FilterSidebar ------------------ */
+
+.filter-sidebar {
+  width: 260px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.filter-sidebar h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.filter-sidebar label {
+  display: block;
+  margin: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.filter-sidebar .apply-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #f5a6d6;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ------------------ 右侧主内容 ------------------ */
+
+.product-area {
+  flex: 1;
+}
+
+.page-container h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* ------------------ 商品网格 ------------------ */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;   /* 调大间距，像你的参考图 */
+}
+
+/* ------------------ 分页按钮 ------------------ */
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: #f8b5d9;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
