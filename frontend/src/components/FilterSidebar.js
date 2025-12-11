@@ -3,7 +3,7 @@
 import React from "react";
 import "./FilterSidebar.css";
 
-function FilterSidebar() {
+function FilterSidebar({setBrand}) {
   return (
     <div className="filter-sidebar">
 
@@ -15,16 +15,20 @@ function FilterSidebar() {
           <input 
             type="checkbox"
             value="CoffeeTime"
-            onChange={() => { /* TODO: handle brand check */ }}
+            onChange={(e) =>
+              setBrand(e.target.checked ? "apple" : "")
+            }
           />
-          <span className="checkbox-text">CoffeeTime</span>
+          <span className="checkbox-text">Apple</span>
         </label>
 
-        <label className="filter-checkbox">
+        {/* <label className="filter-checkbox">
           <input 
             type="checkbox"
             value="UrbanVase"
-            onChange={() => { /* TODO: handle brand check */ }}
+            onChange={(e) =>
+              setBrand(e.target.checked ? "apple" : "")
+            }
           />
           <span className="checkbox-text">UrbanVase</span>
         </label>
@@ -33,13 +37,15 @@ function FilterSidebar() {
           <input 
             type="checkbox"
             value="GlowHaven"
-            onChange={() => { /* TODO: handle brand check */ }}
+            onChange={(e) =>
+              setBrand(e.target.checked ? "apple" : "")
+            }
           />
           <span className="checkbox-text">Glow Haven</span>
-        </label>
+        </label> */}
       </div>
 
-      {/* Category Section */}
+      {/* Category Section
       <div className="filter-section">
         <h3 className="filter-title">Category</h3>
 
@@ -47,7 +53,9 @@ function FilterSidebar() {
           <input 
             type="checkbox"
             value="Home"
-            onChange={() => { /* TODO: handle category check */ }}
+            onChange={(e) =>
+              setBrand(e.target.checked ? "apple" : "")
+            }
           />
           <span className="checkbox-text">Home & Living</span>
         </label>
@@ -56,11 +64,13 @@ function FilterSidebar() {
           <input 
             type="checkbox"
             value="Accessories"
-            onChange={() => { /* TODO: handle category check */ }}
+            onChange={(e) =>
+              setBrand(e.target.checked ? "apple" : "")
+            }
           />
           <span className="checkbox-text">Accessories</span>
         </label>
-      </div>
+      </div> */}
 
     </div>
   );

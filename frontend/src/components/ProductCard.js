@@ -9,7 +9,7 @@ function ProductCard({ product }) {
   return (
     <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }}>
     <div className="card">
-      <img src={product.image} alt={product.name} className="card-img" />
+      <img src={`http://localhost:5000${product.image}`} alt={product.name} className="card-img" />
 
       <h2 className="card-title">{product.name}</h2>
       <p className="card-price">${product.price}</p>

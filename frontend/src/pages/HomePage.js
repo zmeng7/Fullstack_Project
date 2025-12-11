@@ -1,11 +1,13 @@
 
 import FilterSidebar from '../components/FilterSidebar';
-import React ,{ useState }from 'react';
+import React ,{ useState,useEffect }from 'react';
 import ProductCard from '../components/ProductCard';
-import products from '../data/products';
 import './HomePage.css';
 
 function HomePage() {
+  const [brand, setBrand] = useState("");
+  const [products, setProducts] = useState([]);
+  
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
 
@@ -15,11 +17,22 @@ function HomePage() {
   
   const totalPages = Math.ceil(products.length / productsPerPage);
 
+  
+
+  useEffect(() => {
+    async function loadProducts() {
+      const res = await fetch(`http://localhost:5000/api/products?brand=${brand}`);
+      const data = await res.json();
+      setProducts(data);
+    }
+
+    loadProducts();
+  }, [brand]);  // brand 改变就重新 fetch
 
 
   return (
     <div className="home-layout">
-      <FilterSidebar />
+      <FilterSidebar setBrand={setBrand} />
 
       <div className="product-area">
 
